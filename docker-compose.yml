@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  server:
+    build:
+      dockerfile: Dockerfile.local
+      context: laravel
