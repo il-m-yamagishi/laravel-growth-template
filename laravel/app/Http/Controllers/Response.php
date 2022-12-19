@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * @copyright 2022 Masaru Yamagishi
+ * @license Apache-2.0
+ */
+
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use Illuminate\Contracts\Support\Responsable;
@@ -49,7 +56,9 @@ abstract class Response implements JsonSerializable, Responsable
 
         $validator = Validator::make($payload, $rules);
 
-        $validator->validate();
+        if ($validator->fails()) {
+            throw new ResponseValidationException($validator->errors());
+        }
 
         return new JsonResponse($payload);
     }

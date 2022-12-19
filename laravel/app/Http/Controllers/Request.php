@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * @copyright 2022 Masaru Yamagishi
+ * @license Apache-2.0
+ */
+
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Http\FormRequest;
@@ -12,7 +19,7 @@ abstract class Request extends FormRequest
 {
     /**
      * {@inheritDoc}
-     * @psalm-return T
+     * @return T
      */
     public function validated($key = null, $default = null)
     {

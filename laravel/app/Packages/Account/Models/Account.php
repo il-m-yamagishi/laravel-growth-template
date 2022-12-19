@@ -1,14 +1,20 @@
 <?php
 
-namespace App\Models;
+/**
+ * @copyright 2022 Masaru Yamagishi
+ * @license Apache-2.0
+ */
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+declare(strict_types=1);
+
+namespace App\Packages\Account\Models;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class Account extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -18,7 +24,6 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
         'email',
         'password',
     ];
