@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "EditorConfig.EditorConfig",
+    "m1guelpf.better-pest",
+    "EditorConfig.EditorConfig",
+    "xdebug.php-debug",
+    "neilbrayfield.php-docblocker",
+    "bmewburn.vscode-intelephense-client",
+    "getpsalm.psalm-vscode-plugin",
+    "redhat.vscode-yaml"
+  ]
+}
