@@ -1,18 +1,20 @@
 version: '3'
 
 services:
-    web:
-        build:
-            context: laravel
-        volumes:
-            - ./laravel:/var/www/app
-        ports:
-            - 8080:8080
-        command: [ "php", "-S", "0.0.0.0:8080", "-t", "public" ]
+  api:
+    build:
+      context: php-packages/api-server
+    volumes:
+      - ./php-packages/api-server:/var/www/app
+    ports:
+      - 8080:8080
+    command: [ "php", "-S", "0.0.0.0:8080", "-t", "public" ]
 
-    node:
-        image: node:18.12.1-alpine
-        volumes:
-            - ./laravel:/var/www/app
-        working_dir: /var/www/app
-        command: [ "node", "--version" ]
+  frontend:
+    image: node:18.12.1-alpine
+    volumes:
+      - ./node-packages/frontend-server:/var/www/app
+    ports:
+      - 8081:8081
+    working_dir: /var/www/app
+    command: [ "npm", "run", "dev" ]

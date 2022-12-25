@@ -1,0 +1,23 @@
+{
+  "name": "laravel-growth-template",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/il-m-yamagishi/laravel-growth-template.git"
+  },
+  "author": "Masaru Yamagishi <akai_inu@live.jp>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/il-m-yamagishi/laravel-growth-template/issues"
+  },
+  "homepage": "https://github.com/il-m-yamagishi/laravel-growth-template#readme",
+  "devDependencies": {
+    "vite": "^4.0.3"
+  }
+}

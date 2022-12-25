@@ -7,6 +7,7 @@
     "neilbrayfield.php-docblocker",
     "bmewburn.vscode-intelephense-client",
     "getpsalm.psalm-vscode-plugin",
-    "redhat.vscode-yaml"
+    "redhat.vscode-yaml",
+    "open-southeners.laravel-pint"
   ]
 }

@@ -1,0 +1,27 @@
+{
+  "name": "laravel-growth/core",
+  "type": "library",
+  "description": "",
+  "keywords": [],
+  "license": "Apache-2.0",
+  "require": {
+    "php": "^8.2.0",
+    "ext-random": "*",
+    "laravel/framework": "^9.19"
+  },
+  "autoload": {
+    "psr-4": {
+      "LaravelGrowth\\Core\\": "src/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
