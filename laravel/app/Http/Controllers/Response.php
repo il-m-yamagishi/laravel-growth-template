@@ -22,7 +22,7 @@ abstract class Response implements JsonSerializable, Responsable
     /**
      * Constructor
      *
-     * @param array|null $result
+     * @param  array|null  $result
      */
     public function __construct(private readonly ?array $result = null)
     {
@@ -43,6 +43,7 @@ abstract class Response implements JsonSerializable, Responsable
         if (is_null($this->result)) {
             return ['ok' => true];
         }
+
         return $this->result;
     }
 

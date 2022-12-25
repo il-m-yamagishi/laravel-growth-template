@@ -16,6 +16,7 @@ use App\Http\Controllers\Request;
  *   email: string,
  *   password: string
  * }>
+ *
  * @psalm-internal App\Packages\Account\Http
  */
 final class RegisterAccountRequest extends Request

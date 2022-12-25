@@ -16,6 +16,7 @@ use LogicException;
 
 /**
  * Response data has invalid structure. Check your response logic.
+ *
  * @psalm-internal App\Http\Controllers
  */
 final class ResponseValidationException extends LogicException implements Responsable
@@ -23,7 +24,7 @@ final class ResponseValidationException extends LogicException implements Respon
     /**
      * Constructor
      *
-     * @param MessageBag $errors Error MessageBag
+     * @param  MessageBag  $errors Error MessageBag
      */
     public function __construct(private readonly MessageBag $errors)
     {
