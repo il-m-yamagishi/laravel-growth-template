@@ -8,13 +8,15 @@ FROM mlocati/php-extension-installer:${PHP_EXT_INSTALLER_VERSION} AS ext_install
 FROM php:${PHP_VERSION}
 
 ARG COMPOSER_VERSION=2.5.1
+ARG PHP_EXTENSIONS="opcache pdo_sqlite"
+ARG APT_PACKAGES="unzip"
 
 COPY --from=ext_installer /usr/bin/install-php-extensions /usr/bin/
 
-RUN /usr/bin/install-php-extensions @composer-${COMPOSER_VERSION} opcache pdo_sqlite
+RUN /usr/bin/install-php-extensions @composer-${COMPOSER_VERSION} ${PHP_EXTENSIONS}
 
 RUN apt update \
-    && apt install -y --no-install-recommends unzip \
+    && apt install -y --no-install-recommends ${APT_PACKAGES} \
     && apt-get -y clean \
     && rm -rf /var/lib/apt/lists/*
 
